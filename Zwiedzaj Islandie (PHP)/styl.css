@@ -1,0 +1,56 @@
+* {
+    font-family: 'Comic Sans MS', 'sans-serif';
+}
+
+header, main {  
+    width: 70%;
+    text-align: center;
+}
+
+header, aside {
+    background-color: PaleTurquoise;
+    border-radius: 20px;
+}
+
+header {
+    height: 100px;
+    padding: 2%;
+    float: left;
+}
+
+aside {
+    width: 25%;
+    height: 700px;
+    line-height: 2;
+    float: right;
+}
+
+main {
+    float: left;
+}
+
+footer {
+    padding-top: 10px;
+    clear: both;
+}
+
+section {
+    border: 1px dashed DimGray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 400px;
+    overflow: auto;
+}
+
+.miniatury {
+    height: 200px;
+    padding: 10px;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+.miniatury:hover {
+    opacity: 1;
+}
