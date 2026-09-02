@@ -1,3 +1,7 @@
+<?php
+    $conn = mysqli_connect("localhost", "root", "", "islandia");
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -14,17 +18,49 @@
         <h3>Do zwiedzania</h3>
         <ul>
             <li>Wodospady:
-                <ol><!-- Skrypt 1 --></ol>
+                <ol>
+                    <?php
+                        $sql = "SELECT nazwa FROM `obiekty` WHERE panstwo = 'Islandia' AND idRodzaj = 10;";
+                        $result = mysqli_query($conn, $sql);
+                        while($row = $result -> fetch_assoc()){
+                            echo "<li>" . $row['nazwa'] . "</li>";
+                        }
+                    ?>
+                </ol>
             </li>
             <li>Siedliska zwierząt:
-                <ol><!-- Skrypt 2 --></ol>
+                <ol>
+                    <?php
+                        $sql = "SELECT nazwa FROM `obiekty` WHERE panstwo = 'Islandia' AND idRodzaj = 14;";
+                        $result = mysqli_query($conn, $sql);
+                        while($row = $result -> fetch_assoc()){
+                            echo "<li>" . $row['nazwa'] . "</li>";
+                        }
+                    ?>
+                </ol>
             </li>
         </ul>
     </aside>
     
     <main>
-        <h2>Galeria</h2>
-        <section><!-- Skrypt 4 --></section>
+        <h2>Opis Miejsca</h2>
+        <section>
+            <?php
+                if(isset($_GET['idObiekt'])){
+                    $id = $_GET['idObiekt'];
+                    $sql = "SELECT plik, nazwa, nazwaCechy, wartoscCechy, opis, rodzaj FROM `obiekty` JOIN `rodzaje` ON obiekty.idRodzaj = rodzaje.idRodzaj WHERE idObiekt = $id;";
+                    $result = mysqli_query($conn, $sql);
+                    while($row = $result -> fetch_assoc()){
+                        echo "<img src = '$row[plik]'" . "alt = '$row[nazwa]'";
+                        echo "<br>";
+                        echo "<h2>  $row[nazwa]  </h2>";
+                        echo "<h3>  $row[rodzaj]  </h3>";
+                        echo "<p> $row[nazwaCechy]: $row[wartoscCechy] </p>";
+                        echo "<p> $row[opis] </p>";
+                    }
+                };
+            ?>
+        </section>
     </main>
     <footer>
         <hr>
@@ -32,3 +68,7 @@
     </footer>
 </body>
 </html>
+
+<?php
+    $conn -> close();
+?>
