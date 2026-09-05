@@ -1,0 +1,9 @@
+1. SELECT idKontynent, nazwa FROM `kontynenty`;
+
+2. SELECT nazwa, wartoscCechy, plik FROM `obiekty` WHERE panstwo = "Polska" AND idRodzaj = 10;
+
+3. SELECT idObiekt, panstwo, nazwa, wartoscCechy FROM `obiekty` WHERE idRodzaj = 10 AND idKontynent = 6;
+
+4. INSERT INTO `osiagniecia`(`idObiekt`, `idTurysta`) VALUES (34, 2);
+
+5. SELECT idTurysta, nick FROM `turysci`;
