@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Fotel</title>
+</head>
+<body>
+    <header>Sklep meblowy</header>
+    <hr>
+    <main>
+        <section>
+            <img src="fotel1.png" alt ="fotel" id="glowny" class="obraz" onclick="otwieraOkno()">
+            <br>
+            <img src="fotel1.png" alt="miniatura" id=1 class="miniatury" onclick="zamienaGlownegoObrazu(this)">
+            <img src="fotel2.png" alt="miniatura" id=2 class="miniatury" onclick="zamienaGlownegoObrazu(this)">
+            <img src="fotel3.png" alt="miniatura" id=3 class="miniatury" onclick="zamienaGlownegoObrazu(this)">
+            <div class="okno">
+                <span class="zamknij" onclick="zamknijOkno()">$times;</span>
+                <img class="obrazOkno" alt="">
+            </div>
+        </section>
+        <article>
+            <h2>Żółty Fotel</h2>
+            <p>Nasz żółty fotel może być przygotowany w trzech wariantach, 
+            które można przeglądać na grafikach. Jest wygodny i elegancki. 
+            Wariant 1 polecamy do wnętrz klasycznych. Wariant 3 jest
+            utrzymany w stylu glamour, a guzik na środku oparcia jest
+            wykonany z kryształka. Wygodne podłokietniki sprawiają, że w 
+            tym fotelu naprawdę się odpoczywa. Wykonany z elastycznej 
+            pianki - materiału, który wyróżnia się plastycznością oraz 
+            sprężystością, zapewniając komfort siedzenia.</p>
+            <p>Zorganizujemy dla Ciebie bezpłatną dostawę oraz wniesiemy 
+            towar.</p>
+            <strong>Wybierz wariant fotela</strong>
+            <select>
+                <option>Wariant 1</option>
+                <option>Wariant 2</option>
+                <option>Wariant 3</option>
+            </select>
+            <p><button>KUP TERAZ</button></p>
+            <p><a href="sklep.html">Do strony głównej</a></p>
+        </article>
+    </main>
+    <footer>
+        <hr>
+        <p>Autor strony: <i>00000000000</i></p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
