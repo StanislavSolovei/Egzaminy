@@ -1,4 +1,4 @@
-1. SELECT nazwa, styl, cena FROM `meble` WHERE czyNowy = 1 AND cena <= 1000 ORDER BY cena ASC;
+1. SELECT nazwa, styl, cena FROM `meble` WHERE czyNowy = 1 AND cena < 1000 ORDER BY cena ASC;
 
 2. CREATE VIEW komody AS SELECT idMeble, nazwa, kategoria, cena FROM meble WHERE kategoria = 3;
 
