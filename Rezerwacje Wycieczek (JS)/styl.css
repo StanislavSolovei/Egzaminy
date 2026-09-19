@@ -1,0 +1,64 @@
+* {
+    font-family: 'Bookman Old Style';
+}
+
+body {
+    background-color: aliceblue;
+    user-select: none;
+}
+
+header, footer {
+    background-color: skyblue;
+    text-align: center;
+    padding: 1px;
+    border-radius: 15px;
+}
+
+footer {
+    clear: both;
+}
+
+nav {
+    width: 90%;
+    text-align: center;
+}
+
+section {
+    width: 45%;
+    height: 640px;
+    float: left;
+}
+
+aside {
+    width: 10%;
+    height: 700px;
+    overflow: hidden;
+    float: left;
+}
+
+aside > img {
+    width: 100%;
+}
+
+span {
+    font-size: 200%;
+    cursor: pointer;
+}
+
+button {
+    background-color: skyblue;
+    width: 45%;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+input, select {
+    margin: 3px;
+}

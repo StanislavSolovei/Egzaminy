@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Biuro turystyczne</title>
+</head>
+<body>
+    <header>
+        <h1>Rezerwacja wycieczek</h1>
+    </header>
+    <main>
+        <nav>
+            <button id="uczestnik" onclick="uczestnik()">Uczestnik</button>
+            <button id="rezerwacja" onclick="rezerwacja()">Rezerwacja</button>
+        </nav>
+        <section>
+            <h2>Dane Klienta</h2>
+            <img src="osoba.png" alt="Klient">
+            <br>
+            <label for="imie">Imię</label>
+            <input id="imie" type="text" name="imie">
+            <br>
+            <label for="nazwisko">Nazwisko</label>
+            <input id="nazwisko" type="text" name="nazwisko">
+            <br>
+            <p><a href="wycieczki.html">Do strony głównej</a></p>
+        </section>
+        <section>
+            <h2>Dane rezerwacji</h2>
+            <span id="minus" onclick="mniej()">&laquo;</span>
+            <img id="obraz" src="1.jpg" alt="wycieczka">
+            <span id="plus" onclick="wiecej()">&raquo;</span>
+            <h4 id="nazwa">Barcelona</h4>
+            <label for="liczbaOsob">Liczba osób:</label>
+            <input id="liczbaOsob" type="number" name="liczbaOsob "min="1" max="4" value="2">
+            <br>
+            <label for="miejsceWylotu">Miejsce wylotu:</label>
+            <select id="miejsceWylotu" name="miejsceWylotu">
+                <option id="warszawa" disabled>Warszawa</option>
+                <option id="krakow" disabled>Kraków</option>
+                <option id="wroclaw" disabled>Wrocław</option>
+            </select>
+            <br>
+            <input id="sniadanie" type="radio" id="sniadania" name="wyzywienie" checked disabled>
+            <label for="sniadania">Śniadania</label>
+
+            <input id="obiadokolacje" type="radio" id="obiadokolacje" name="wyzywienie" disabled>
+            <label for="obiadokolacje">Śniadania i obiadokolacje</label>
+
+            <input id="inclusive" type="radio" id="all-inclusive" name="wyzywienie" disabled>
+            <label for="all-inclusive">All inclusive</label>
+            <br>
+            <button>Sprawdź cenę</button>
+        </section>
+        <aside>
+            <img src="1.jpg" alt="wycieczki">
+            <img src="2.jpg" alt="wycieczki">
+            <img src="3.jpg" alt="wycieczki">
+            <img src="1.jpg" alt="wycieczki">
+            <img src="2.jpg" alt="wycieczki">
+            <img src="3.jpg" alt="wycieczki">
+            <img src="1.jpg" alt="wycieczki">
+            <img src="2.jpg" alt="wycieczki">
+            <img src="3.jpg" alt="wycieczki">
+        </aside>
+    </main>
+    <footer>
+        <p>Autor strony: <i>00000000000</i></p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
