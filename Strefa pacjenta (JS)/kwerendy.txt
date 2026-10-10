@@ -1,0 +1,4 @@
+1.SELECT nazwa, ilosc FROM `leki` WHERE jednostka = "szt.";
+2.SELECT imie, nazwisko, rokUr FROM `pacjenci` WHERE rokUr >= 2000 AND imie LIKE "%a";
+3.SELECT typ, COUNT(ilosc) FROM `typy` JOIN `leki` ON typy.idTypy = leki.idTypy GROUP BY typ;
+4.CREATE USER 'Lekarz'@'localhost' IDENTIFIED BY 'Lek@rz';
